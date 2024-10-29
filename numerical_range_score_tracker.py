@@ -6,9 +6,8 @@
 
 score_tracker1 = 0
 score_tracker2 = 0
-score_tracker3 = []
-score_tracker4 = []
-score_tracker5 = 0
+score_tracker3_list = []
+score_tracker4_list = []
 
 input_tracker1 = []
 input_tracker2 = []
@@ -24,21 +23,27 @@ while True:
         score_tracker2 += 1
         input_tracker2.append(user_input)
     elif 21<= user_input <= 30:
-        score_tracker3.append(user_input)
+        score_tracker3_list.append(user_input)
     elif 31<= user_input <= 40:
-        score_tracker4.append(user_input)
+        score_tracker4_list.append(user_input)
     elif 41<= user_input <= 50:
-        score_tracker5 += 1
+    # My concept here is to loop through where all the inputs are stored then assign and append variables in similar amounts at a different list to record the score 
         input_tracker5.append(user_input)
+        num_list = []
+        for inputs in input_tracker5:
+            inputs = "i"
+            num_list.append(inputs)
     else:
         break 
 
-num_score_tracker3 = len(score_tracker3)
-num_score_tracker4 = len(score_tracker4)
+score_tracker3 = len(score_tracker3_list)
+score_tracker4 = len(score_tracker4_list)
+# the .count() counts how many 'i' where on the num_list. This is the endgame of my method in range 41-50
+score_tracker5 = num_list.count(inputs)
 print(f"1 - 10 = {score_tracker1} ")
 print(f"11 - 20 = {score_tracker2} ")
-print(f"21 - 30 = {num_score_tracker3} ")
-print(f"31 - 40 = {num_score_tracker4} ")
+print(f"21 - 30 = {score_tracker3} ")
+print(f"31 - 40 = {score_tracker4} ")
 print(f"41 - 50 = {score_tracker5} ")
 
 while True:
@@ -52,7 +57,7 @@ while True:
 
 print(input_tracker1)
 print(input_tracker2)
-print(score_tracker3)
-print(score_tracker4)
+print(score_tracker3_list)
+print(score_tracker4_list)
 print(input_tracker5)
-        
+
