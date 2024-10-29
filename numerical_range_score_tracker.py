@@ -22,30 +22,34 @@ input_tracker5 = []
 
 print("Please take note that in the occurrence of an invalid input, the program will proceed to display the ranges")
 while True:
-    # Asks the user for a numerical input within 1-50
-    user_input = int(input("Please enter a number from 1-50, inclusive: "))
-    if 1<= user_input <= 10:
-        # If the user_input is within this range, the program adds 1 to the score tracker assigned to this range
-        score_tracker1 += 1
-        input_tracker1.append(user_input)
-    elif 11<= user_input <= 20:
-        score_tracker2 += 1
-        input_tracker2.append(user_input)
-    elif 21<= user_input <= 30:
-        # If the user input is within range, the program stores it in the assigned list and count its elements using len() at the bottom 
-        score_tracker3_list.append(user_input)
-    elif 31<= user_input <= 40:
-        # Edit: My new concept here is to change each elements in the original list then assign it to new defined list, then use .count() to record the score
-        input_tracker4.append(user_input)
-        # This comprehension format is sourced from stackoverflow.com and was tailored by me accordingly. Link: https://stackoverflow.com/questions/7126916/perform-a-string-operation-for-every-element-in-a-python-list
-        edit_input_tracker4 = ["i" for num1 in input_tracker4]
-        score_list1 = edit_input_tracker4 
-    elif 41<= user_input <= 50:
-        input_tracker5.append(user_input)
-        # Used "i" for much simpler representation
-        edit_input_tracker5 = ["i" for num2 in input_tracker5]
-        score_list2 = edit_input_tracker5
-    else:
+    try:
+        # Asks the user for a numerical input within 1-50
+        user_input = int(input("Please enter a number from 1-50, inclusive: "))
+        if 1<= user_input <= 10:
+            # If the user_input is within this range, the program adds 1 to the score tracker assigned to this range
+            score_tracker1 += 1
+            input_tracker1.append(user_input)
+        elif 11<= user_input <= 20:
+            score_tracker2 += 1
+            input_tracker2.append(user_input)
+        elif 21<= user_input <= 30:
+            # If the user input is within range, the program stores it in the assigned list and count its elements using len() at the bottom 
+            score_tracker3_list.append(user_input)
+        elif 31<= user_input <= 40:
+            # Edit: My new concept here is to change each elements in the original list then assign it to new defined list, then use .count() to record the score
+            input_tracker4.append(user_input)
+            # This comprehension format is sourced from stackoverflow.com and was tailored by me accordingly. Link: https://stackoverflow.com/questions/7126916/perform-a-string-operation-for-every-element-in-a-python-list
+            edit_input_tracker4 = ["i" for num1 in input_tracker4]
+            score_list1 = edit_input_tracker4 
+        elif 41<= user_input <= 50:
+            input_tracker5.append(user_input)
+            # Used "i" for much simpler representation
+            edit_input_tracker5 = ["i" for num2 in input_tracker5]
+            score_list2 = edit_input_tracker5
+        else:
+            print("An invalid input has been entered. The ranges are as follows:")
+            break
+    except ValueError:
         print("An invalid input has been entered. The ranges are as follows:")
         break
 
@@ -70,7 +74,6 @@ while True:
     else:
         print("Please respond using what's only specified")
 
-print("These are the numbers you inputted along with their respective ranges")
 print(f"1 - 10: {input_tracker1}")
 print(f"11 - 20: {input_tracker2}")
 print(f"21 - 30: {score_tracker3_list}")
