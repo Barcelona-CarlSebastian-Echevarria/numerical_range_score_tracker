@@ -13,6 +13,8 @@ input_tracker1 = []
 input_tracker2 = []
 input_tracker5 = []
 
+num_list = []
+
 print("Please take note that in the occurrence of an invalid input, the program will proceed to display the ranges")
 while True:
     user_input = int(input("Please enter a number from 1-50, inclusive: "))
@@ -29,17 +31,16 @@ while True:
     elif 41<= user_input <= 50:
     # My concept here is to loop through where all the inputs are stored then assign and append variables in similar amounts at a different list to record the score 
         input_tracker5.append(user_input)
-        num_list = []
-        for inputs in input_tracker5:
-            inputs = "i"
-            num_list.append(inputs)
+        for number in input_tracker5:
+            number = "i"
+            num_list.append(number)
     else:
         break 
 
 score_tracker3 = len(score_tracker3_list)
 score_tracker4 = len(score_tracker4_list)
 # the .count() counts how many 'i' where on the num_list. This is the endgame of my method in range 41-50
-score_tracker5 = num_list.count(inputs)
+score_tracker5 = num_list.count("i")
 print(f"1 - 10 = {score_tracker1} ")
 print(f"11 - 20 = {score_tracker2} ")
 print(f"21 - 30 = {score_tracker3} ")
