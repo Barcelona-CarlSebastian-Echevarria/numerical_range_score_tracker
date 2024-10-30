@@ -43,13 +43,13 @@ while True:
             # If the user input is within range, the program stores it in the assigned list and count its elements using len() at the bottom 
             score_tracker5_list.append(user_input)
         else:
-            print("An invalid input has been entered. The ranges are as follows:")
+            print("An invalid input has been entered. The number of inputs belonging within each ranges are as follows:")
             break
     except ValueError:
-        print("An invalid input has been entered. The ranges are as follows:")
+        print("An invalid input has been entered. The number of inputs belonging within each ranges are as follows:")
         break
 
-# the .count() counts how many 'i' where on the num_list. This is the endgame of my method in range 1-10, 11-20, 21-30
+# the .count() counts how many 'i' where on the score_lists. This is the endgame of my method in range 1-10, 11-20, 21-30
 score_tracker1 = score_list1.count("i")
 score_tracker2 = score_list2.count("i")
 score_tracker3 = score_list3.count("i")
