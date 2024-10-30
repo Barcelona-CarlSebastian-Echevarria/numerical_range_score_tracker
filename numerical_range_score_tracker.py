@@ -7,18 +7,13 @@
 
 
 # Used to record the scores for its ranges
-score_tracker1 = 0
-score_tracker2 = 0
+score_tracker1 = score_tracker2 = 0
 score_tracker3_list = []
 # Defined lists to avoid errors when the range using .count() is empty
-score_list1 = []
-score_list2 = []
+score_list1, score_list2 = [], []
 
 # Used to store the inputs for display at the last prompt
-input_tracker1 = []
-input_tracker2 = []
-input_tracker4 = []
-input_tracker5 = []
+input_tracker1, input_tracker2, input_tracker4, input_tracker5 = [], [], [], []
 
 print("Please take note that in the occurrence of an invalid input, the program will proceed to display the ranges")
 while True:
