@@ -33,7 +33,6 @@ while True:
             score_list2 = edit_input_tracker2
         elif 21<= user_input <= 30:
             input_tracker3.append(user_input)
-            # Used "i" for much simpler representation
             edit_input_tracker3 = ["i" for num3 in input_tracker3]
             score_list3 = edit_input_tracker3
         elif 31<= user_input <= 40:
@@ -50,7 +49,7 @@ while True:
         print("An invalid input has been entered. The ranges are as follows:")
         break
 
-# the .count() counts how many 'i' where on the num_list. This is the endgame of my method in range 41-50
+# the .count() counts how many 'i' where on the num_list. This is the endgame of my method in range 1-10, 11-20, 21-30
 score_tracker1 = score_list1.count("i")
 score_tracker2 = score_list2.count("i")
 score_tracker3 = score_list3.count("i")
